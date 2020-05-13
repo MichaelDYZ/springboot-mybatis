@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dyz.mybatis.mapper.UserMapper">
+
+    <insert id="saveUser">
+        INSERT INTO `user` (name, password,phone)
+        VALUES (#{user.name},
+                #{user.password},
+                #{user.phone})
+    </insert>
+
+    <delete id="deleteById">
+        DELETE
+        FROM `user`
+        WHERE `id` = #{id}
+    </delete>
+</mapper>
